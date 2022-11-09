@@ -120,7 +120,7 @@ const DocsPage = () => {
       {/* -------------------Setting Limits------------------- */}
   
         <h1 id="setting-limits">Setting Limits</h1>
-        <h2 id="rate-limits">
+        <h2 id= "rate-limits">
           Rate Limiting
         </h2>
         <ol className="latchql-ol">
