@@ -304,7 +304,7 @@ const HomePage = () => {
               {' '}
               <img
                 className="photos"
-                src="public/headshots/ben.png"
+                src="public/headshots/Alex-sized.jpg"
                 alt=""
               />
             </div>
