@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Prism from 'prismjs';
+import ReactMarkdown from 'react-markdown';
 
 const DocsPage = () => {
   useEffect(() => {
@@ -7,6 +8,7 @@ const DocsPage = () => {
   }, []);
 
   return (
+
     <div id="docs">
 
       {/* -------------------Docs SideBar------------------- */}
@@ -15,13 +17,10 @@ const DocsPage = () => {
         <img id="latchql-logo" src="public/logo.png" alt=""></img>
         <ul id="docs-sidebar-container">
           <a href="#latchql">
-            <li className="h1">LatchQL</li>
+            <li className="h1">LatchQL NPM Package</li>
           </a>
           <a href="#installing-the-npm-module">
             <li className="h1">Installing the NPM Module</li>
-          </a>
-          <a href="#using-latchql">
-            <li className="h1">Using LatchQL</li>
           </a>
           <a href="#setting-limits">
             <li className="h1">Setting Limits</li>
@@ -79,89 +78,56 @@ const DocsPage = () => {
           <img src="public/banner.jpg" alt="latch" />
         </p>
 
-        <h1 id="latchql">LatchQL</h1>
+        <h1 id="latchql">LatchQL NPM Package</h1>
         <ul className="docs-heading-ul">
           <li>
-            Short description of LatchQL
+            LatchQL is an open-source, free-to-use, lightweight middleware package that adds additional layers of security to authenticate/authorize and provide permissions for users to have different levels of access to a database through graphQL queries.
           </li>
         </ul>
+        <ReactMarkdown>
+        # __LatchQL NPM Package__
+    </ReactMarkdown>
         
       {/* -------------------Installing the NPM Module------------------- */}
 
-        <h1 id="installing-the-npm-module">Installing the NPM Module</h1>
-        <p>Steps:</p>
-        <ol className="latchql-ol">
+        <h1 id="installing-the-npm-module">Package Features</h1>
+        <ul className="latchql-ol">
           <li>
-           first
-          </li>
-          <li>
-           second
+           Enables users to customize depth, cost, and rate limiting for all GraphQL queries sent to the server.
           </li>
           <li>
-           third
-          </li>
-        </ol>
-
-      {/* -------------------Using LatchQL------------------- */}
-  
-        <h1 id="using-latchql">Using LatchQL</h1>
-        <ol className="latchql-ol">
-        <li>
-           first
+           Authorize and customize limiting for admin, users, and non-user levels.
           </li>
           <li>
-           second
+           Throw errors before execution using depth and cost limiting algorithms.
           </li>
           <li>
-           third
+            Utilize a caching method with Redis for limiting the rate of user requests to your GraphQL endpoint.
           </li>
-        </ol>
+        </ul>
 
       {/* -------------------Setting Limits------------------- */}
   
-        <h1 id="setting-limits">Setting Limits</h1>
+        <h1 id="setting-limits">Why do I need GraphQL limiters?</h1>
         <h2 id="rate-limits">
           Rate Limiting
         </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
+        <p className="latchql-ol">
+
+           Rate limiting is a strategy used for limiting network traffic and strain on the server. It's mainly used to prevent bot activity, brute force, DoS, DDoS, and web scraping attacks. By using the rate limiter, users are allocated a maximum of n operations for every fixed size 1-minute time window. Once the client has performed n operations, they must wait.
+    </p>
         <h2 id="depth-limits">
           Depth Limiting
         </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
+        <p className="latchql-ol">
+        Depth limiting is vital for protecting the server against malicious query attacks. This limit is commonly used for never ending query loops that expose the endpoint to potential attacks. By using the depth limiter, you can validate the depth of imcoming queries on a user's permission level and prevent execution if it exceeds the limit.
+        </p>
         <h2 id="cost-limits">
           Cost Limiting
         </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
+        <p className="latchql-ol">
+        Cost limiting is essential for securing your GraphQL endpoint. By putting a limit on the cost of a single GraphQL transaction, you can prevent resource overload by blocking excessively expensive requests. Users have the ability to define the maximum cost on specific users. If the incoming request exceeds the limit, an error will be provided as seen in the image below.
+        </p>
         <h2 id="auth-limits">
           Auth Limiting
         </h2>
@@ -182,14 +148,18 @@ const DocsPage = () => {
         <h1 id="how-to-launch-the-GUI">How to Launch the GUI</h1>
         <ol className="latchql-ol">
           <li>
-           first
+          Install LatchQL npm package.
           </li>
           <li>
-           second
+          Clone the playground.
           </li>
           <li>
-           third
+          Install its dependencies: 'npm install --force'
           </li>
+          <li>
+          Build the playground: 'npm run dev'
+          </li>
+
         </ol>
         
       {/* -------------------GUI Features------------------- */}
@@ -289,14 +259,12 @@ const DocsPage = () => {
 
       {/* -------------------Stretch Goals------------------- */}
   
-        <h2 id="stretch-goals">In Progress</h2>
+        <h2 id="stretch-goals">What’s next for LatchQL</h2>
+        <p>While the playground could provide the test of the authorization levels, in future iterations we hope to have more features on our playground. Here are some possible features for the playground:</p>
         <ol className="stretch-goals-ol">
+          <li>Storing a history of queries</li>
           <li>
-           stretch goal
-          </li>
-          <li>stretch goal</li>
-          <li>
-          stretch goal
+          Editing user's permission level and customize individual limiters from the playground
           </li>
         </ol>
 
