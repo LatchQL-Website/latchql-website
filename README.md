@@ -1,6 +1,6 @@
 ## LatchQL-Website
 
-Visit the LatchQL Website at [website url](website url)
+Visit the LatchQL [Website](latchql.io)
 
 Checkout our open-source product [here!](https://github.com/oslabs-beta/LatchQL)
 

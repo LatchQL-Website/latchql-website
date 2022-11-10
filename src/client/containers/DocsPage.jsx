@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import Prism from 'prismjs';
 import ReactMarkdown from 'react-markdown';
 
+
 const DocsPage = () => {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
-
-  return (
+    return (
 
     <div id="docs">
 
@@ -19,11 +19,11 @@ const DocsPage = () => {
           <a href="#latchql">
             <li className="h1">LatchQL NPM Package</li>
           </a>
-          <a href="#installing-the-npm-module">
-            <li className="h1">Installing the NPM Module</li>
+          <a href="#package-features">
+            <li className="h1">Package Features</li>
           </a>
-          <a href="#setting-limits">
-            <li className="h1">Setting Limits</li>
+          <a href="#why-do-i-need-graphql-limiters?">
+            <li className="h1">Why do I need GraphQL limiters?</li>
           </a>
           <a href="#rate-limits">
             <li className="h2">Rate Limits</li>
@@ -34,35 +34,20 @@ const DocsPage = () => {
           <a href="#cost-limits">
             <li className="h2">Cost Limits</li>
           </a>
-          <a href="#auth-limits">
-            <li className="h2">Auth Limits</li>
+          <a href="#getting-started">
+            <li className="h1">Getting Started</li>
           </a>
-          <a href="#how-to-launch-the-GUI">
-            <li className="h1">How to Launch the GUI</li>
+          <a href="#latchql-playground">
+            <li className="h1">LatchQL Playground</li>
           </a>
-          <a href="#gui-features">
-            <li className="h1">GUI features</li>
+          <a href="#playground-features">
+            <li className="h1">Playground Features</li>
           </a>
-          <a href="#changing-auth-level">
-            <li className="h2">Changing Auth Level</li>
-          </a>
-          <a href="#running-queries">
-            <li className="h2">Running Queries</li>
-          </a>
-          <a href="#error-handling">
-            <li className="h2">Error Handling</li>
-          </a>
-          <a href="#extra-feature">
-            <li className="h2">Extra Feature or nah?</li>
-          </a>
-          <a href="#how-to-run-tests">
-            <li className="h1">How to Run Tests</li>
-          </a>
-          <a href="#all-the-features">
-            <li className="h1">Features</li>
+          <a href="#getting-started-playground">
+            <li className="h1">Getting Started with Playground</li>
           </a>
           <a href="#stretch-goals">
-            <li className="h1">In Progress Features</li>
+            <li className="h1">Contribute</li>
           </a>
           <a href="#tech-stack">
             <li className="h1">Technologies</li>
@@ -79,18 +64,13 @@ const DocsPage = () => {
         </p>
 
         <h1 id="latchql">LatchQL NPM Package</h1>
-        <ul className="docs-heading-ul">
-          <li>
+        <p className="docs-heading-ul">
             LatchQL is an open-source, free-to-use, lightweight middleware package that adds additional layers of security to authenticate/authorize and provide permissions for users to have different levels of access to a database through graphQL queries.
-          </li>
-        </ul>
-        <ReactMarkdown>
-        # __LatchQL NPM Package__
-    </ReactMarkdown>
+        </p>
         
-      {/* -------------------Installing the NPM Module------------------- */}
+      {/* -------------------Package Features------------------- */}
 
-        <h1 id="installing-the-npm-module">Package Features</h1>
+        <h1 id="package-features">Package Features</h1>
         <ul className="latchql-ol">
           <li>
            Enables users to customize depth, cost, and rate limiting for all GraphQL queries sent to the server.
@@ -106,9 +86,9 @@ const DocsPage = () => {
           </li>
         </ul>
 
-      {/* -------------------Setting Limits------------------- */}
+      {/* -------------------Why do I need GraphQL limiters?------------------- */}
   
-        <h1 id="setting-limits">Why do I need GraphQL limiters?</h1>
+        <h1 id="why-do-i-need-graphql-limiters?">Why do I need GraphQL limiters?</h1>
         <h2 id="rate-limits">
           Rate Limiting
         </h2>
@@ -128,139 +108,93 @@ const DocsPage = () => {
         <p className="latchql-ol">
         Cost limiting is essential for securing your GraphQL endpoint. By putting a limit on the cost of a single GraphQL transaction, you can prevent resource overload by blocking excessively expensive requests. Users have the ability to define the maximum cost on specific users. If the incoming request exceeds the limit, an error will be provided as seen in the image below.
         </p>
-        <h2 id="auth-limits">
-          Auth Limiting
-        </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
 
-      {/* -------------------How to Launch the GUI------------------- */}
+      {/* -------------------Getting Started------------------- */}
   
-        <h1 id="how-to-launch-the-GUI">How to Launch the GUI</h1>
-        <ol className="latchql-ol">
-          <li>
-          Install LatchQL npm package.
-          </li>
-          <li>
-          Clone the playground.
-          </li>
-          <li>
-          Install its dependencies: 'npm install --force'
-          </li>
-          <li>
-          Build the playground: 'npm run dev'
-          </li>
+        <h1 id="getting-started">Getting Started</h1>
+        <p className="latchql-ol">
+         
+              <ol>
+              <li>Install LatchQL in your terminal</li>
+              <pre>
+            <code className="language-sh">npm install</code>
+             </pre>
+           <br></br>
+        <li>Create a configuration file called <code>latch_config.json</code> in your project's root directory to assign and store your limiters.
+          Example: <img src="public/codeblock.png" alt=""></img>
+        </li>
+        <br></br>
+        <li>
+          Run redis server
+          <pre>
+          <code className="language-sh">redis-server</code>
+        </pre>
+        </li>
+        <br></br>
+        <li>
+          If you get an error in step 2, you may be running an instance of redis somewhere else. To stop it:
+          <pre>
+          <code className="language-sh">killall redis-server</code>
+        </pre>
+        and then repeat step 3
+        </li>
+          </ol>
+        </p>
+      
 
-        </ol>
+      <h1>Implementation</h1>
+      <p>To see an example of how to implement LatchQL into your project, please visit our <a href="https://github.com/oslabs-beta/LatchQL">GitHub</a>.</p>
         
       {/* -------------------GUI Features------------------- */}
   
-        <h1 id="gui-features">
-          GUI features
+        <h1 id="latchql-playground">
+          LatchQL Playground
         </h1>
-        <h2 id="changing-auth-level">
-          Changing auth level
-        </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
-        <h2 id="running-queries">
-          Running Queries
-        </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
-        <h2 id="error-handling">
-          Error Handling
-        </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
-        <h2 id="extra-feature">
-          Extra Feature or nah?
-        </h2>
-        <ol className="latchql-ol">
-          <li>
-           first
-          </li>
-          <li>
-           second
-          </li>
-          <li>
-           third
-          </li>
-        </ol>
-
-      {/* -------------------How to Run Tests------------------- */}
-  
-        <h1 id="how-to-run-tests">How to Run Tests</h1>
-        <h3 id="testing-with-jest">
-          Testing with Jest
-        </h3>
         <p>
-          WE SHALL SHOW HOW TO TEST HERE
+        The LatchQL Playground is an optional, built-in playground for testing your GraphQL endpoint.
+        <img className="gif" src="public/depth.gif" alt="" />
         </p>
 
       {/* -------------------Features------------------- */}
   
-        <h1 id="all-the-features">Features</h1>
+        <h1 id="playground-features">Playground Features</h1>
         <ul className="features-ul">
-        <li>Short description of queries</li>
-          <li>Short description of GUI</li>
-          <li>
-            Short description of rate limiter
-          </li>
-          <li>Short description of depth limiter</li>
-          <li>Short description of fragments</li>
-          <li>
-          Short description of auth limiter
-          </li>
-          <li>Short description of redis</li>
-          <li>
-          Short description of cpu usage
-          </li>
-          <li>
-          Short description of response time
-          </li>
+        <li>Preview cost and depth of your current query before execution.</li>
+        <li>Diplays important metrics for tracking response time and CPU usage.</li>
+        <li>Save variables to reference in the body of your GraphQL queries.</li>
         </ul>
 
-      {/* -------------------Stretch Goals------------------- */}
+
+
+        {/* -------------------Getting Started------------------- */}
   
-        <h2 id="stretch-goals">What’s next for LatchQL</h2>
-        <p>While the playground could provide the test of the authorization levels, in future iterations we hope to have more features on our playground. Here are some possible features for the playground:</p>
+        <h1 id="getting-started-playground">Getting Started with the Playground</h1>
+        <p className="latchql-ol">
+          <ol>
+            <li>Install LatchQL npm package</li>
+        <li>Clone the playground.</li>
+        <li>
+          Install its dependencies:
+          <pre>
+          <code className="language-sh">npm install --force</code>
+        </pre>
+        </li>
+        <li>
+          Build the playground:
+          <pre>
+          <code className="language-sh">npm run dev</code>
+        </pre>
+        </li>
+          </ol>
+        </p>
+
+              {/* -------------------Stretch Goals------------------- */}
+  
+              <h2 id="stretch-goals">How to Contribute</h2>
+              <p>If you would like to contribute in improving the functionality of LatchQL, please submit your ideas and/or bug fixes to our team by forking the repo and submitting your changes via a pull request.</p>
+              <br></br>
+              <h3>Planned Features: </h3>
+        
         <ol className="stretch-goals-ol">
           <li>Storing a history of queries</li>
           <li>
@@ -273,9 +207,9 @@ const DocsPage = () => {
         <h1 id="tech-stack">Tech Stack</h1>
         <ul className="built-with-ul">
         <li>
-            <a href="https://graphql.org/">GraphQL</a>
+        <img className="gif" src="public/tech.png" alt="" />
           </li>
-          <li>
+          {/* <li>
             <a href="https://www.typescriptlang.org/">TypeScript</a>
           </li>
           <li>
@@ -298,7 +232,7 @@ const DocsPage = () => {
           </li>
           <li>
             <a href="https://expressjs.com/">Express</a>
-          </li>
+          </li> */}
         </ul>
         <br></br>
         <br></br>
@@ -331,6 +265,7 @@ const DocsPage = () => {
         <br></br>
         <br></br>
       </main>
+  
     </div>
   );
 };
