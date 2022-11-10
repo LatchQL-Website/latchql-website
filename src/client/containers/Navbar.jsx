@@ -3,7 +3,7 @@ const Navbar = () => {
     <nav className="nav" id="navbar">
       <div className="nav-container">
         <a href="/">
-          <img className="logo" id="logo" src="header.png" />
+          <img className="logo" id="logo" src="public/header.png" />
         </a>
         <div className="nav-right-container">
           <ul className="nav-links">
@@ -20,7 +20,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="https://www.scaryforkids.com/pics/scary-movie.jpg"
+                href="/"
                 target="_blank"
                 className="link-text"
               >
