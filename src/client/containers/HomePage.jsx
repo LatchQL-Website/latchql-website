@@ -20,7 +20,7 @@ const HomePage = () => {
               <div>
                 <li className="latch-li-1">Open Source</li>
                 <li className="latch-li-2">
-                  Free-to-use lightweight middleware package
+                  Free-to-use, lightweight, middleware package.
                 </li>
               </div>
             </div>
@@ -29,7 +29,7 @@ const HomePage = () => {
               <div>
                 <li className="latch-li-1">Security</li>
                 <li className="latch-li-2">
-                  LatchQL adds additional layers of security
+                  Add additional layers of security to your GraphQL endpoint.
                 </li>
               </div>
             </div>
@@ -39,7 +39,7 @@ const HomePage = () => {
               <div>
                 <li className="latch-li-1">Authentication and Authorization</li>
                 <li className="latch-li-2">
-                Provide permissions for users to have different levels of access to a database through graphQL queries.
+                Implement customizable configuration for role-based authorization into your GraphQL application.
                 </li>
               </div>
             </div>

@@ -120,10 +120,18 @@ const DocsPage = () => {
             <code className="language-sh">npm install</code>
              </pre>
            <br></br>
-        <li>Create a configuration file called <code>latch_config.json</code> in your project's root directory to assign and store your limiters.
-          Example: <img src="public/codeblock.png" alt=""></img>
+        <li>Create a configuration file called latch_config.json in your project's root directory to assign and store your limiters.
+          Example: <img className="docimg" src="public/codeblock.png" alt=""></img>
         </li>
         <br></br>
+        <li>Create a .env file and save SECRET_KEY as an environment variable. Note: if none is set, it will default to "GENERICKEY".
+          Example: <img src="public/secretkey.png" alt="" />
+        </li>
+        <br></br>
+        <li>Install redis on your machine. For macOS users, install with homebrew. If you've already installed redis, skip this step.</li>
+        <pre>
+          <code className="language-sh">brew install redis</code>
+        </pre>
         <li>
           Run redis server
           <pre>
@@ -132,18 +140,19 @@ const DocsPage = () => {
         </li>
         <br></br>
         <li>
-          If you get an error in step 2, you may be running an instance of redis somewhere else. To stop it:
+          If you get an error in step 5, you may be running an instance of redis somewhere else. To stop it:
           <pre>
           <code className="language-sh">killall redis-server</code>
         </pre>
-        and then repeat step 3
+        and then repeat step 5
         </li>
           </ol>
         </p>
       
 
       <h1>Implementation</h1>
-      <p>To see an example of how to implement LatchQL into your project, please visit our <a href="https://github.com/oslabs-beta/LatchQL">GitHub</a>.</p>
+      <p>Included in the NPM-MODULE directory is a dummy folder which includes an already built-out mock express server which you can use to test the LatchQL authentication and middleware package. Clone the repo, navigate to the dummy directory, install dependencies and run the command `npm start` to spin up the server.</p>
+      <p>To see an example of how to implement LatchQL into your project and create an instance, please visit our <a href="https://github.com/oslabs-beta/LatchQL">Github</a> for the full docs.</p>
         
       {/* -------------------GUI Features------------------- */}
   
