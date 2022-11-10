@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Navbar from "./containers/Navbar";
-import Footer from "./containers/Footer";
+import Navbar from "./src/client/containers/Navbar";
+import Footer from "./src/client/containers/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./containers/HomePage";
-import DocsPage from "./containers/DocsPage";
+import HomePage from "./src/client/containers/HomePage";
+import DocsPage from "./src/client/containers/DocsPage";
 
 import "../../public/styles.scss";
 
