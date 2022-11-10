@@ -3,7 +3,7 @@ const Navbar = () => {
     <nav className="nav" id="navbar">
       <div className="nav-container">
         <a href="/">
-          <img className="log" id="logo" src="header.png" />
+          <img className="logo" id="logo" src="header.png" />
         </a>
         <div className="nav-right-container">
           <ul className="nav-links">
