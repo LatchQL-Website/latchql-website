@@ -27,11 +27,14 @@ const Navbar = () => {
                 Blog
               </a>
             </li>
-            <li id ="latch">
-            <a href="/docs" target="_blank">
+            {/* <li id ="latch">
+              <a 
+                href="/docs" 
+                target="_blank"
+            >
             <button2 className="latch-btn2">Get Started</button2>
           </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

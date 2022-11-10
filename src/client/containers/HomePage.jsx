@@ -162,33 +162,36 @@ const HomePage = () => {
           </div>
         </figure>
       </section>
+      
       {/* -------------------- DEMO -------------------- */}
+
       <section id="demo">
         <div class="box1">
-        <h1 className="demo">Demo</h1>
+        <h1></h1>
         </div>
         <main className="div-main"></main>
         <div>
-          <img className="gif" src="public/banner.jpg" alt="" />
+          <img className="gif" src="public/cost.gif" alt="" />
         </div>
         <div>
-          <img className="gif" src="public/banner.jpg" alt="" />
+          <img className="gif" src="public/depth.gif" alt="" />
         </div>
         <div className="text">
           Cost Limit
-          <img className="gif" src="public/banner.jpg" alt="" />
+          <img className="gif" src="public/rate.gif" alt="" />
         </div>
+      <div class="card2" data-tilt data-tilt-scale="0.95" data-tilt-startY="40">
         <div className="text">
           Depth Limit
-          <img className="gif" src="public/banner.jpg" alt="" />
+          <img className="gif" src="public/user.gif" alt="" />
         </div>
+        </div>  
         <div className="text">
           Rate Limit
         </div>
         <div className="text">
           User Permissions
         </div>
-        <figure className="div-side"></figure>
         <figure className="div-side"></figure>
       </section>
 
@@ -197,6 +200,98 @@ const HomePage = () => {
       <section id="contact">
         <h1 className="team">The Team</h1>
         <div className="team2">
+
+      {/* -------------------- Alex McPhail-------------------- */}
+
+      <div class="container">
+        <div class="box">
+        <div class="imgBx">
+          <div className="team2-member">
+            <div className="team2-member-photo">
+              {' '}
+              <img
+                className="photos"
+                src="public/headshots/alex.jpeg"
+                alt=""
+              />
+            </div>
+            <div className="team2-member-name">Alex McPhail</div>
+            <div className="team2-member-title">Software Engineer</div>
+            <div className="team2-member-links">
+              <div className="team2-member-github">
+                <a href="https://github.com/mcphail-alex" target="_blank">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div className="team2-member-linkedin">
+                <a
+                  href="https://www.linkedin.com/in/mcphail-alex"
+                  target="_blank"
+                >
+                  <img
+                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        
+          {/* -------------------- Celine Leung -------------------- */}
+
+          <div class="container">
+        <div class="box">
+      <div class="imgBx">
+          <div className="team2-member">
+            <div className="team2-member-photo">
+              {' '}
+              <img
+                className="photos"
+                src="public/headshots/celine.png"
+                alt=""
+              />
+            </div>
+            <div className="team2-member-name">Celine Leung</div>
+            <div className="team2-member-title">Software Engineer</div>
+            <div className="team2-member-links">
+              <div className="team2-member-github">
+                <a href="https://github.com/ccelineleung" target="_blank">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div className="team2-member-linkedin">
+                <a
+                  href="https://www.linkedin.com/in/celineleung412/"
+                  target="_blank"
+                >
+                  <img
+                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          
+
+          {/* -------------------- Hannah Bernstein -------------------- */}
+
+          <div class="container">
+        <div class="box">
+      <div class="imgBx">
           <div className="team2-member">
             <div className="team2-member-photo">
               {' '}
@@ -230,110 +325,17 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="team2-member">
-            <div className="team2-member-photo">
-              {' '}
-              <img
-                className="photos"
-                src="public/headshots/ray.png"
-                alt=""
-              />
-            </div>
-            <div className="team2-member-name">
-              Raymond Kim
-            </div>
-            <div className="team2-member-title">Software Engineer</div>
-            <div className="team2-member-links">
-              <div className="team2-member-github">
-                <a href="https://github.com/reykeem" target="_blank">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div className="team2-member-linkedin">
-                <a
-                  href="https://www.linkedin.com/in/raymondhkim/"
-                  target="_blank"
-                >
-                  <img
-                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
-                    alt=""
-                  />
-                </a>
-              </div>
+          </div>
             </div>
           </div>
 
+          {/* -------------------- Johnjered Tolentino -------------------- */}
+
+          
+          <div class="container">
+        <div class="box">
+      <div class="imgBx">
           <div className="team2-member">
-            <div className="team2-member-photo">
-              {' '}
-              <img
-                className="photos"
-                src="public/headshots/celine.png"
-                alt=""
-              />
-            </div>
-            <div className="team2-member-name">Celine Leung</div>
-            <div className="team2-member-title">Software Engineer</div>
-            <div className="team2-member-links">
-              <div className="team2-member-github">
-                <a href="https://github.com/ccelineleung" target="_blank">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div className="team2-member-linkedin">
-                <a
-                  href="https://www.linkedin.com/in/celineleung412/"
-                  target="_blank"
-                >
-                  <img
-                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="team2-member">
-            <div className="team2-member-photo">
-              {' '}
-              <img
-                className="photos"
-                src="public/headshots/Alex-sized.jpg"
-                alt=""
-              />
-            </div>
-            <div className="team2-member-name">Alex McPhail</div>
-            <div className="team2-member-title">Software Engineer</div>
-            <div className="team2-member-links">
-              <div className="team2-member-github">
-                <a href="https://github.com/mcphail-alex" target="_blank">
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div className="team2-member-linkedin">
-                <a
-                  href="https://www.linkedin.com/in/mcphail-alex"
-                  target="_blank"
-                >
-                  <img
-                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="team2-member">
             <div className="team2-member-photo">
               {' '}
               <img
@@ -366,6 +368,55 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+        </div>
+       </div>
+       </div>
+
+
+        {/* -------------------- Ray Kim -------------------- */}
+
+        <div class="container">
+        <div class="box">
+      <div class="imgBx">
+          <div className="team2-member">
+            <div className="team2-member-photo">
+              {' '}
+              <img
+                className="photos"
+                src="public/headshots/ray.png"
+                alt=""
+              />
+            </div>
+            <div className="team2-member-name">
+              Raymond Kim
+            </div>
+            <div className="team2-member-title">Software Engineer</div>
+            <div className="team2-member-links">
+              <div className="team2-member-github">
+                <a href="https://github.com/reykeem" target="_blank">
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div className="team2-member-linkedin">
+                <a
+                  href="https://www.linkedin.com/in/raymondhkim/"
+                  target="_blank"
+                >
+                  <img
+                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
+                    alt=""
+                  />
+                </a>
+            </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>     
       </section>
     </div>
   );
